@@ -3,26 +3,26 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML", category: "frontend", img: "/src/assets/html-5-svgrepo-com.svg" },
-  { name: "CSS", category: "frontend", img: "/src/assets/css3-svgrepo-com.svg" },
-  { name: "JavaScript", category: "frontend", img: "/src/assets/javascript-svgrepo-com.svg" },
-  { name: "Tailwind CSS", category: "frontend", img: "/src/assets/tailwindcss-icon-svgrepo-com.svg" },
+  { name: "HTML", category: "frontend", img: "/assets/html-5-svgrepo-com.svg" },
+  { name: "CSS", category: "frontend", img: "/assets/css3-svgrepo-com.svg" },
+  { name: "JavaScript", category: "frontend", img: "/assets/javascript-svgrepo-com.svg" },
+  { name: "Tailwind CSS", category: "frontend", img: "/assets/tailwindcss-icon-svgrepo-com.svg" },
 
   // Frameworks
-  { name: "React", category: "frameworks", img: "/src/assets/react.svg" },
-  { name: "Flask", category: "frameworks", img: "/src/assets/flask-svgrepo-com.svg" },
+  { name: "React", category: "frameworks", img: "/assets/react.svg" },
+  { name: "Flask", category: "frameworks", img: "/assets/flask-svgrepo-com.svg" },
 
   // Backend
-  { name: "Python", category: "backend", img: "/src/assets/python-svgrepo-com.svg" },
-  { name: "Java", category: "backend", img: "/src/assets/java-svgrepo-com.svg" },
-  { name: "SQL", category: "backend", img: "/src/assets/sql-svgrepo-com.svg" },
-  { name: "SQLite", category: "backend", img: "/src/assets/sqlite-svgrepo-com.svg" },
+  { name: "Python", category: "backend", img: "/assets/python-svgrepo-com.svg" },
+  { name: "Java", category: "backend", img: "/assets/java-svgrepo-com.svg" },
+  { name: "SQL", category: "backend", img: "/assets/sql-svgrepo-com.svg" },
+  { name: "SQLite", category: "backend", img: "/assets/sqlite-svgrepo-com.svg" },
 
   // Tools
-  { name: "Git", category: "tools", img: "/src/assets/git-svgrepo-com.svg" },
-  { name: "Github", category: "tools", img: "/src/assets/github-142-svgrepo-com.svg" },
-  { name: "Figma", category: "tools", img: "/src/assets/figma-svgrepo-com.svg" },
-  { name: "VS Code", category: "tools", img: "/src/assets/vs-code-svgrepo-com.svg" },
+  { name: "Git", category: "tools", img: "/assets/git-svgrepo-com.svg" },
+  { name: "Github", category: "tools", img: "/assets/github-142-svgrepo-com.svg" },
+  { name: "Figma", category: "tools", img: "/assets/figma-svgrepo-com.svg" },
+  { name: "VS Code", category: "tools", img: "/assets/vs-code-svgrepo-com.svg" },
 ];
 
 const categories = ["all", "frontend", "backend", "frameworks", "tools"];

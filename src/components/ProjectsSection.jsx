@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "BudgeIT - Budget Tracker",
     description: "A semi-working budget tracker app built with Python, HTML, CSS, and JavaScript. Using Supabase for the database and Flask as its main framework.",
-    image: "/src/banners/budgeIT.png",
+    image: "/banners/budgeIT.png",
     tags: ["Flask", "Python", "Supabase"],
     url: "https://budge-it-j4bp.onrender.com/dashboard",
     githubUrl: "#",
@@ -15,7 +15,7 @@ const projects = [
     title: "Pasay South High School School Portal",
     description:
       "A work in progress school portal for Pasay South High School. Using Flask as its main framework and Supabase for the database.",
-    image: "/src/banners/SchoolPortal.png",
+    image: "/banners/SchoolPortal.png",
     tags: ["Flask", "Python", "Supabase"],
     url: "https://student-monitor-student-portal.onrender.com/student/login",
     githubUrl: "#",
@@ -25,7 +25,7 @@ const projects = [
     title: "Asia Pacific College - Gym Log System",
     description:
       "A gym log system for Asia Pacific College. Using Flask as its main framework and using a local database.",
-    image: "/src/banners/gymlog.png",
+    image: "/banners/gymlog.png",
     tags: ["Python", "Flask"],
     githubUrl: "https://github.com/tarikuzuma/gymlog-test.git",
   },
