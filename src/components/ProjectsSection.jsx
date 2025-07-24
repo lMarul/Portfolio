@@ -1,34 +1,33 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
+    title: "BudgeIT - Budget Tracker",
+    description: "A semi-working budget tracker app built with Python, HTML, CSS, and JavaScript. Using Supabase for the database and Flask as its main framework.",
+    image: "/src/banners/budgeIT.png",
+    tags: ["Flask", "Python", "Supabase"],
+    url: "https://budge-it-j4bp.onrender.com/dashboard",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Pasay South High School School Portal",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
+      "A work in progress school portal for Pasay South High School. Using Flask as its main framework and Supabase for the database.",
+    image: "/src/banners/SchoolPortal.png",
+    tags: ["Flask", "Python", "Supabase"],
+    url: "https://student-monitor-student-portal.onrender.com/student/login",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Asia Pacific College - Gym Log System",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A gym log system for Asia Pacific College. Using Flask as its main framework and using a local database.",
+    image: "/src/banners/gymlog.png",
+    tags: ["Python", "Flask"],
+    githubUrl: "https://github.com/tarikuzuma/gymlog-test.git",
   },
 ];
 
@@ -48,9 +47,12 @@ export const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
-            <div
+            <a
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover block transition-transform duration-300 hover:scale-[1.02]"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -76,23 +78,17 @@ export const ProjectsSection = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
                     <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
                       href={project.githubUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      onClick={e => e.stopPropagation()}
                     >
-                      <Github size={20} />
+                      <Github size={30} />
                     </a>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -100,7 +96,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/lMarul"
           >
             Check My Github <ArrowRight size={16} />
           </a>

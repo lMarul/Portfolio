@@ -3,28 +3,29 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: "HTML", category: "frontend", img: "/src/assets/html-5-svgrepo-com.svg" },
+  { name: "CSS", category: "frontend", img: "/src/assets/css3-svgrepo-com.svg" },
+  { name: "JavaScript", category: "frontend", img: "/src/assets/javascript-svgrepo-com.svg" },
+  { name: "Tailwind CSS", category: "frontend", img: "/src/assets/tailwindcss-icon-svgrepo-com.svg" },
+
+  // Frameworks
+  { name: "React", category: "frameworks", img: "/src/assets/react.svg" },
+  { name: "Flask", category: "frameworks", img: "/src/assets/flask-svgrepo-com.svg" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  { name: "Python", category: "backend", img: "/src/assets/python-svgrepo-com.svg" },
+  { name: "Java", category: "backend", img: "/src/assets/java-svgrepo-com.svg" },
+  { name: "SQL", category: "backend", img: "/src/assets/sql-svgrepo-com.svg" },
+  { name: "SQLite", category: "backend", img: "/src/assets/sqlite-svgrepo-com.svg" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Git", category: "tools", img: "/src/assets/git-svgrepo-com.svg" },
+  { name: "Github", category: "tools", img: "/src/assets/github-142-svgrepo-com.svg" },
+  { name: "Figma", category: "tools", img: "/src/assets/figma-svgrepo-com.svg" },
+  { name: "VS Code", category: "tools", img: "/src/assets/vs-code-svgrepo-com.svg" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "frameworks", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -60,23 +61,10 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg shadow-xs card-hover flex items-center gap-4"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              <img src={skill.img} alt={skill.name + ' icon'} className="h-8 w-8 flex-shrink-0" />
+              <span className="font-semibold text-lg">{skill.name}</span>
             </div>
           ))}
         </div>
@@ -84,3 +72,4 @@ export const SkillsSection = () => {
     </section>
   );
 };
+
