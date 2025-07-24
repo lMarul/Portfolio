@@ -6,11 +6,12 @@ const skills = [
   { name: "HTML", category: "frontend", img: "/assets/html-5-svgrepo-com.svg" },
   { name: "CSS", category: "frontend", img: "/assets/css3-svgrepo-com.svg" },
   { name: "JavaScript", category: "frontend", img: "/assets/javascript-svgrepo-com.svg" },
-  { name: "Tailwind CSS", category: "frontend", img: "/assets/tailwindcss-icon-svgrepo-com.svg" },
 
   // Frameworks
-  { name: "React", category: "frameworks", img: "/assets/react.svg" },
   { name: "Flask", category: "frameworks", img: "/assets/flask-svgrepo-com.svg" },
+  { name: "React", category: "frameworks", img: "/assets/react.svg" },
+  { name: "Tailwind CSS", category: "frontend", img: "/assets/tailwindcss-icon-svgrepo-com.svg" },
+
 
   // Backend
   { name: "Python", category: "backend", img: "/assets/python-svgrepo-com.svg" },
