@@ -10,7 +10,7 @@ const skills = [
   // Frameworks
   { name: "Flask", category: "frameworks", img: "/assets/flask-svgrepo-com.svg" },
   { name: "React", category: "frameworks", img: "/assets/react.svg" },
-  { name: "Tailwind CSS", category: "frontend", img: "/assets/tailwindcss-icon-svgrepo-com.svg" },
+  { name: "Tailwind CSS", category: "frameworks", img: "/assets/tailwindcss-icon-svgrepo-com.svg" },
 
 
   // Backend
@@ -47,10 +47,10 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full border-2 cursor-pointer transition-colors duration-300 capitalize",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-secondary/70 text-forefround border-transparent hover:border-primary"
               )}
             >
               {category}

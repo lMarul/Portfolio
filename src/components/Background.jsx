@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-export const StarBackground = () => {
+export const Background = () => {
   useEffect(() => {
     if (window.particlesJS) {
-      window.particlesJS('particles-js', {
+      window.particlesJS('background-js', {
         particles: {
           number: { value: 80, density: { enable: true, value_area: 800 } },
           color: { value: "#3b82f6" },
@@ -27,7 +27,7 @@ export const StarBackground = () => {
 
   return (
     <div
-      id="particles-js"
+      id="background-js"
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ position: 'fixed', width: '100%', height: '100%', top: 0, left: 0, zIndex: 0 }}
     />

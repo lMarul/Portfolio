@@ -8,7 +8,7 @@ const projects = [
     image: "/banners/budgeIT.png",
     tags: ["Flask", "Python", "Supabase"],
     url: "https://budge-it-j4bp.onrender.com/dashboard",
-    githubUrl: "#",
+    githubUrl: "https://github.com/lMarul/Budge-IT.git",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projects = [
     image: "/banners/SchoolPortal.png",
     tags: ["Flask", "Python", "Supabase"],
     url: "https://student-monitor-student-portal.onrender.com/student/login",
-    githubUrl: "#",
+    githubUrl: "",
   },
   {
     id: 3,
@@ -52,7 +52,10 @@ export const ProjectsSection = () => {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover block transition-transform duration-300 hover:scale-[1.02]"
+              className={
+                "group bg-card rounded-lg overflow-hidden shadow-xs card-hover block transition-transform duration-300 hover:scale-[1.02] relative" +
+                (project.url ? " hover:ring-4 hover:ring-purple-500/40" : "")
+              }
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -61,22 +64,20 @@ export const ProjectsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-
-              <div className="p-6">
+              <div className="p-6 min-h-[260px]">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground" key={tag}>
                       {tag}
                     </span>
                   ))}
                 </div>
-
                 <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
+                {project.githubUrl && (
+                  <div className="absolute bottom-4 left-4">
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -86,20 +87,29 @@ export const ProjectsSection = () => {
                       <Github size={30} />
                     </a>
                   </div>
-                </div>
+                )}
               </div>
             </a>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/lMarul"
-          >
-            Check My Github <ArrowRight size={16} />
-          </a>
+          <div className="flex items-center justify-center gap-4">
+            <a
+              className="cosmic-button w-fit flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white"
+              target="_blank"
+              href="https://github.com/lMarul/Portfolio.git"
+            >
+              This Portfolio
+            </a>
+            <a
+              className="cosmic-button w-fit flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+              target="_blank"
+              href="https://github.com/lMarul"
+            >
+              Check My Github
+            </a>
+          </div>
         </div>
       </div>
     </section>

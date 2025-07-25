@@ -8,6 +8,7 @@ import {
   Twitch,
   Twitter,
   Facebook,
+  ArrowUp,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -31,8 +32,8 @@ export const ContactSection = () => {
     }, 1500);
   };
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
+    <section id="contact" className="min-h-screen flex flex-col justify-center py-12 px-4 relative bg-secondary/30 mt-8">
+      <div className="container mx-auto max-w-5xl flex-1 flex flex-col justify-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary"> Touch</span>
         </h2>
@@ -58,6 +59,14 @@ export const ContactSection = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-full flex justify-center items-center py-8 mb-16 animate-low-bounce">
+        <a
+          href="#hero"
+          className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+        >
+          <ArrowUp size={28} />
+        </a>
       </div>
     </section>
   );
