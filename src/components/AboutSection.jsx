@@ -16,12 +16,12 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              With various experiences in web development from various projects, 
-              I am still eager to learn more about various languages, frameworks, and technologies that I can use to create more projects.
+              With rich experiences in web development from various projects, 
+              I am still eager to learn more about other languages, frameworks, and technologies that I can use to create more projects.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about learning and exploring about things I am interested in, especially in web development and cybersecurity.
+              I'm passionate about learning and exploring new things that I am interested in, especially in web development and cybersecurity.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
