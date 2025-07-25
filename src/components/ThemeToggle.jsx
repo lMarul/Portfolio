@@ -40,11 +40,7 @@ export const ThemeToggle = () => {
       )}
       tabIndex={0}
     >
-      {/* Track decorations (optional clouds/stars) */}
-      <span className="absolute left-4 top-2 text-xs select-none pointer-events-none transition-opacity duration-300" style={{opacity: isDarkMode ? 0 : 1}}>☁️</span>
-      <span className="absolute left-7 top-4 text-xs select-none pointer-events-none transition-opacity duration-300" style={{opacity: isDarkMode ? 0 : 1}}>☁️</span>
-      <span className="absolute right-4 top-2 text-xs select-none pointer-events-none transition-opacity duration-300" style={{opacity: isDarkMode ? 1 : 0}}>✦</span>
-      <span className="absolute right-7 top-4 text-xs select-none pointer-events-none transition-opacity duration-300" style={{opacity: isDarkMode ? 1 : 0}}>✦</span>
+      {/* Removed clouds and stars */}
       {/* Animated thumb */}
       <span
         className={cn(
