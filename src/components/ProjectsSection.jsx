@@ -1,37 +1,10 @@
 import { ArrowRight, Github } from "lucide-react";
-
-const projects = [
-  {
-    id: 1,
-    title: "BudgeIT - Budget Tracker",
-    description: "A semi-working budget tracker app built with Python, HTML, CSS, and JavaScript. Using Supabase for the database and Flask as its main framework.",
-    image: "/banners/budgeIT.png",
-    tags: ["Flask", "Python", "Supabase"],
-    url: "https://budge-it-j4bp.onrender.com/dashboard",
-    githubUrl: "https://github.com/lMarul/Budge-IT.git",
-  },
-  {
-    id: 2,
-    title: "Pasay South High School School Portal",
-    description:
-      "A work in progress school portal for Pasay South High School. Using Flask as its main framework and Supabase for the database.",
-    image: "/banners/SchoolPortal.png",
-    tags: ["Flask", "Python", "Supabase"],
-    url: "https://student-monitor-student-portal.onrender.com/student/login",
-    githubUrl: "",
-  },
-  {
-    id: 3,
-    title: "Asia Pacific College - Gym Log System",
-    description:
-      "A gym log system for Asia Pacific College. Using Flask as its main framework and using a local database.",
-    image: "/banners/gymlog.png",
-    tags: ["Python", "Flask"],
-    githubUrl: "https://github.com/tarikuzuma/gymlog-test.git",
-  },
-];
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
 
 export const ProjectsSection = () => {
+  const projects = useQuery(api.projects.get) ?? [];
+
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -54,7 +27,7 @@ export const ProjectsSection = () => {
               rel="noopener noreferrer"
               className={
                 "group bg-card rounded-lg overflow-hidden shadow-xs card-hover block transition-transform duration-300 hover:scale-[1.02] relative" +
-                (project.url ? " hover:ring-4 hover:ring-purple-500/40" : "")
+                (project.url ? " hover:ring-4 hover:ring-red-500/40" : "")
               }
             >
               <div className="h-48 overflow-hidden">
@@ -96,14 +69,14 @@ export const ProjectsSection = () => {
         <div className="text-center mt-12">
           <div className="flex items-center justify-center gap-4">
             <a
-              className="cosmic-button w-fit flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white"
+              className="cosmic-button w-fit flex items-center gap-2 bg-gradient-to-r from-red-700 to-red-500 text-white"
               target="_blank"
               href="https://github.com/lMarul/Portfolio.git"
             >
               This Portfolio
             </a>
             <a
-              className="cosmic-button w-fit flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+              className="cosmic-button w-fit flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-700 text-white"
               target="_blank"
               href="https://github.com/lMarul"
             >
